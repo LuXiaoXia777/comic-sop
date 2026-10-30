@@ -48,3 +48,7 @@ python3 comic-draft-studio/scripts/build.py --root ./我的漫画工作室 --ini
 - [原始参考图片所在文档](https://my.feishu.cn/wiki/AXCgwZR94iXKfdkxyhpcw636nab)（可能需要访问权限）
 
 HTML的「创作资料」可查看布局应用规则。项目保存自己的 `资料/布局参考.json`，初始化不会覆盖用户修改。飞书新内容需再次读取整理，不会自动同步。技能包包含可离线使用的文字规则及来源索引，不含第三方漫画扫描图，也不将它们标为开源素材。
+
+## 首稿校准
+
+生成前读取用户已确认的风格与最新反馈，先检验代表页，再用看过的参考扩展整期。逐页检查简约程度、动作接触、布局及对白一致性；工具成功不等于用户认可。具体要求见[首稿风格校准与交付](comic-draft-studio/references/first-draft-quality.md)。
