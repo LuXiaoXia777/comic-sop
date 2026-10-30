@@ -17,6 +17,8 @@ def build(root,initialize=False):
         write_default(root/'资料/选题库.json',[])
         write_default(root/'资料/个人规则.json',{'rules':[],'changes':[]})
         write_default(root/'资料/输出标准.json',json.loads((SKILL/'references/output-standard.json').read_text(encoding='utf-8')))
+    # Add reference defaults to old projects without overwriting user edits.
+    write_default(root/'资料/布局参考.json',json.loads((SKILL/'references/layout-library.json').read_text(encoding='utf-8')))
     read=lambda path:json.loads((root/path).read_text(encoding='utf-8'))
     topics=read('资料/选题库.json');rules=read('资料/个人规则.json');standard=read('资料/输出标准.json')
     episodes=[]
@@ -45,7 +47,7 @@ def build(root,initialize=False):
         ['制作速写','生成黑白粗稿，检查姿态、透视、表情、气泡与画面连续性。'],
         ['交付与调整','角色表及含逐页速写的脚本表，反馈持续更新个人规则。']]}]
     data={'kind':'library','name':'漫画工作室','topics':topics,'episodes':episodes,'rules':rules,'skills':[],
-          'outputStandard':standard,'tabs':[{'label':'选题库','kind':'topics'},{'label':'每期内容','kind':'episodes'},{'label':'创作资料','kind':'resources','flow':flow}]}
+          'layoutLibrary':read('资料/布局参考.json'),'outputStandard':standard,'tabs':[{'label':'选题库','kind':'topics'},{'label':'每期内容','kind':'episodes'},{'label':'创作资料','kind':'resources','flow':flow}]}
     (root/'index.html').write_text(page(data),encoding='utf-8')
     print(str(root/'index.html'))
     print('期次数：'+str(len(episodes)))
