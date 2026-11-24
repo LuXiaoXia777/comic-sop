@@ -1,0 +1,36 @@
+/* 本项目：白底、深色前景 */
+:root{color-scheme:light;background:#fff;color:#242a33}
+body{background:#fff;color:#242a33}
+nav{background:#fffffff5;border-color:#e2e5e9}
+a,.meta a{color:#334b63}
+nav button,.page-tabs button{color:#5c6572}
+nav button[aria-selected=true],.page-tabs button[aria-selected=true]{color:#18212d;border-color:#334b63}
+.meta,.small,.caption,.empty,.image-gallery figcaption{color:#626b78}
+input[type=search],textarea{background:#fff;color:#242a33;border-color:#ccd2da}
+.chip,.action,.copy{background:#f5f6f8;color:#303b49;border-color:#d4dae1}
+.chip.active{background:#283849;color:#fff;border-color:#283849}
+.card,.block{background:#fff;border-color:#e2e5e9}
+.card .name,.label,.blocktop .label,.resources .section-title{color:#202936}
+.tag{color:#425469;border-color:#ccd5df}
+pre,td{color:#303946}
+th{background:#fff;color:#273444}
+.tablebox,td,th,table th:not(:last-child),table td:not(:last-child),details,.page-tabs{border-color:#e2e5e9}
+summary{color:#334b63}
+.note{background:#f4f6f8;color:#465566;border-color:#778da4}
+.status{color:#42586b}
+.sketch-dialog{background:#fff;border-color:#d4dae1}
+.sketch-dialog::backdrop{background:#17233370}
+.episode-row{color:#303946;border-color:#e2e5e9}
+.episode-row:hover,.episode-row:focus-visible{color:#182e46;background:#f1f4f7}
+.image-bar:focus-within label{outline-color:#334b63}
+button:hover,.action:hover{filter:brightness(.96)}
+
+
+/* 标签栏下直接接表格，不留顶部空白 */
+.episode-script{padding-top:0}
+@media(max-width:700px){.episode-script{padding-top:0}}
+
+.episode-script .tablebox{overflow:auto;max-width:100%;max-height:calc(100vh - 90px)}
+
+.episode-heading{padding:20px 16px 16px;background:#fff;color:#202936}.episode-heading h1{font-size:24px;line-height:1.4;margin:0;font-weight:650}.episode-heading p{font-size:15px;color:#626b78;margin:8px 0 0;line-height:1.5}
+.colour-column-header{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:30px}.colour-column-header .colour-download{display:inline-flex;align-items:center;flex-shrink:0;margin:0;font-size:12px;padding:5px 9px;white-space:nowrap}.status:not(:empty){padding:10px 16px}
